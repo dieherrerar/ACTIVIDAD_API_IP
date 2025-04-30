@@ -1,0 +1,88 @@
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif; /* Fuente de la página, usando Arial o sans-serif como respaldo */
+    padding: 20px; /* Espacio interno (padding) alrededor del contenido */
+    margin: 0; /* Elimina los márgenes predeterminados del navegador */
+    background-image: url('imagenes/pngtree-blue-technology-news-background-image_782264.jpg'); /* Define una imagen de fondo */
+    background-size: cover; /* La imagen de fondo cubre toda la pantalla, sin que se distorsione */
+    background-attachment: fixed; /* La imagen de fondo no se mueve al hacer scroll */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Estilo para los encabezados h1 */
+h1 {
+    text-align: center; /* Centra el texto del encabezado */
+}
+
+/* Estilos para el contenedor de las noticias */
+.news-container {
+    display: flex; /* Usa Flexbox para organizar los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no caben */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas de noticias */
+}
+
+/* Estilo para cada tarjeta de noticia */
+.news-card {
+    background: white; /* Fondo blanco para las tarjetas */
+    border-radius: 10px; /* Bordes redondeados para las tarjetas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil alrededor de las tarjetas */
+    width: 300px; /* Ancho fijo para cada tarjeta */
+    overflow: hidden; /* Evita que los elementos se desborden fuera de la tarjeta */
+    display: flex; /* Usa Flexbox para organizar el contenido dentro de la tarjeta */
+    flex-direction: column; /* Organiza los elementos en columna dentro de la tarjeta */
+    margin: 0 auto 20px auto; /* Centra la tarjeta y le agrega un margen inferior */
+    margin-top: 50px; /* Espacio por encima de la tarjeta */
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.news-card img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+    height: 200px; /* Define una altura fija para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área asignada sin distorsionarse */
+}
+
+/* Estilo para el contenido de la tarjeta */
+.news-content {
+    padding: 15px; /* Espacio interno en el contenido de la tarjeta */
+    display: flex; /* Usa Flexbox para organizar los elementos dentro del contenido */
+    flex-direction: column; /* Organiza los elementos en columna */
+    flex-grow: 1; /* Permite que el contenido crezca para llenar el espacio disponible */
+}
+
+/* Estilo para los encabezados h2 dentro de la tarjeta */
+.news-content h2 {
+    font-size: 18px; /* Tamaño de fuente para los títulos */
+    margin: 0 0 10px; /* Márgenes alrededor del título (sin margen superior, 10px en la parte inferior) */
+}
+
+/* Estilo para los párrafos dentro de la tarjeta */
+.news-content p {
+    flex-grow: 1; /* Permite que el párrafo crezca para llenar el espacio disponible */
+    font-size: 14px; /* Tamaño de la fuente para el texto */
+    color: #555; /* Color gris oscuro para el texto */
+}
+
+/* Estilo para el enlace dentro de la tarjeta */
+.news-content a {
+    margin-top: 10px; /* Espacio superior entre el párrafo y el enlace */
+    text-align: center; /* Centra el texto dentro del enlace */
+    background: #007BFF; /* Color de fondo azul para el enlace */
+    color: white; /* Color de texto blanco para el enlace */
+    padding: 10px; /* Espacio interno en el enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Bordes redondeados para el enlace */
+}
+
+/* Estilo para cuando el usuario pasa el mouse sobre el enlace (hover) */
+.news-content a:hover {
+    background: #0056b3; /* Cambia el color de fondo a un azul más oscuro cuando el mouse está encima */
+}
+
+/* Estilos para pantallas pequeñas (máximo de 600px de ancho) */
+@media (max-width: 600px) {
+    .news-container {
+        flex-direction: column; /* Cambia la dirección de la flexbox para que los elementos se apilen verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+}

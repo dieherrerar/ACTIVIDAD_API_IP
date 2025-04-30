@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cargando...</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column; /* Alinea el círculo y el texto en columna */
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background-color: #f2f2f2;
+                font-family: Arial, sans-serif;
+            }
+            .spinner {
+                width: 60px;
+                height: 60px;
+                border: 6px solid #ccc;
+                border-top-color: #333;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+                to { transform: rotate(360deg); }
+            }
+            .mensaje {
+                margin-top: 20px;
+                font-size: 1.2rem;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="spinner"></div>
+        <div class="mensaje" id="mensaje">Redireccionando a...</div>
+
+        <script>
+            const destino = sessionStorage.getItem('destino');
+
+            // Opcional: mostrar a qué página vamos (ejemplo bonito)
+            const mensaje = document.getElementById('mensaje');
+            if (destino) {
+                let textoDestino = destino.replace('.html', '').toUpperCase(); // Ej: Tesla.html -> TESLA
+                mensaje.textContent = `Redireccionando a ${textoDestino}`;
+                
+                setTimeout(() => {
+                    window.location.href = destino;
+                }, 500);
+            } else {
+                mensaje.textContent = "No se encontró el destino. Volviendo al inicio...";
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 500);
+            }
+        </script>
+
+    </body>
+</html>
