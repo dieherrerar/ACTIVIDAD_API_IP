@@ -25,7 +25,7 @@ h1 {
 /* Estilo para cada tarjeta de noticia */
 .news-card {
     background: white; /* Fondo blanco para las tarjetas */
-    border-radius: 10px; /* Bordes redondeados para las tarjetas */
+    border-radius: 40px; /* Bordes redondeados para las tarjetas */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil alrededor de las tarjetas */
     width: 300px; /* Ancho fijo para cada tarjeta */
     overflow: hidden; /* Evita que los elementos se desborden fuera de la tarjeta */
@@ -71,7 +71,7 @@ h1 {
     color: white; /* Color de texto blanco para el enlace */
     padding: 10px; /* Espacio interno en el enlace */
     text-decoration: none; /* Elimina el subrayado del enlace */
-    border-radius: 5px; /* Bordes redondeados para el enlace */
+    border-radius: 40px; /* Bordes redondeados para el enlace */
 }
 
 /* Estilo para cuando el usuario pasa el mouse sobre el enlace (hover) */
